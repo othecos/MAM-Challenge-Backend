@@ -1,0 +1,1 @@
+web: npm run preprod && npm run start

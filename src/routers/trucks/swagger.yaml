@@ -1,0 +1,160 @@
+/trucks:
+    get:
+        description: Retrieve all trucks
+        tags:
+            - Trucks
+        produces:
+            - application/json
+        responses:
+            "200":
+                description: Ok
+                content:
+                    application/json:
+                        schema:
+                            type: array
+                            items:
+                                $ref: "#/components/schemas/Truck"
+            "400":
+                $ref: "#/components/responses/BadRequest"
+            "401":
+                $ref: "#/components/responses/Unauthorized"
+            "403":
+                $ref: "#/components/responses/Forbidden"
+            "500":
+                $ref: "#/components/responses/InternalServerError"
+    post:
+        description: Create a new truck
+        tags:
+            - Trucks
+        produces:
+            - application/json
+        requestBody:
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        properties:
+                            location:
+                                type: object
+                                properties:
+                                    lat:
+                                        type: number
+                                    lon:
+                                        type: number
+                            license_plate:
+                                type: string
+        responses:
+            "200":
+                description: Ok
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Truck"
+            "400":
+                $ref: "#/components/responses/BadRequest"
+            "401":
+                $ref: "#/components/responses/Unauthorized"
+            "403":
+                $ref: "#/components/responses/Forbidden"
+            "409":
+                $ref: "#/components/responses/Conflict"
+            "500":
+                $ref: "#/components/responses/InternalServerError"
+
+/trucks/{license_plate}:
+    get:
+        description: Retrive truck by license_plate
+        tags:
+            - Trucks
+        produces:
+        parameters:
+            - in: path
+              name: license_plate
+              required: true
+              type: string
+        responses:
+            "200":
+                description: Ok
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Truck"
+            "400":
+                $ref: "#/components/responses/BadRequest"
+            "401":
+                $ref: "#/components/responses/Unauthorized"
+            "403":
+                $ref: "#/components/responses/Forbidden"
+            "404":
+                $ref: "#/components/responses/NotFound"
+            "500":
+                $ref: "#/components/responses/InternalServerError"
+    patch:
+        description: Update truck location
+        tags:
+            - Trucks
+        produces:
+            - application/json
+        parameters:
+            - in: path
+              name: license_plate
+              required: true
+              type: string
+        requestBody:
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        properties:
+                            location:
+                                type: object
+                                properties:
+                                    lat:
+                                        type: number
+                                    lon:
+                                        type: number
+        responses:
+            "200":
+                description: Truck Location Updated
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Truck"
+            "400":
+                $ref: "#/components/responses/BadRequest"
+            "401":
+                $ref: "#/components/responses/Unauthorized"
+            "403":
+                $ref: "#/components/responses/Forbidden"
+            "404":
+                $ref: "#/components/responses/NotFound"
+            "500":
+                $ref: "#/components/responses/InternalServerError"
+    delete:
+        description: Delete truck
+        tags:
+            - Trucks
+        produces:
+            - application/json
+        parameters:
+            - in: path
+              name: license_plate
+              required: true
+              type: string
+        responses:
+            "200":
+                description: Truck deleted
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Truck"
+            "400":
+                $ref: "#/components/responses/BadRequest"
+            "401":
+                $ref: "#/components/responses/Unauthorized"
+            "403":
+                $ref: "#/components/responses/Forbidden"
+            "404":
+                $ref: "#/components/responses/NotFound"
+            "500":
+                $ref: "#/components/responses/InternalServerError"

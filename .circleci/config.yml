@@ -1,0 +1,29 @@
+orbs:
+    node: circleci/node@3.0.0
+    heroku: circleci/heroku@0.0.10
+version: 2.1
+jobs:
+    tests:
+        docker:
+            - image: circleci/node:12
+        steps:
+            - checkout
+            - run:
+                  name: Install npm dependencies
+                  command: |
+                      npm install --save
+            - run:
+                  name: Run Unit Tests
+                  command: |
+                      npm run test
+            - store_test_results:
+                  path: test-results
+            - store_artifacts:
+                  path: test-results 
+workflows:
+    deploy:
+        jobs:
+            - tests
+            - heroku/deploy-via-git:
+                requires:
+                  - tests
