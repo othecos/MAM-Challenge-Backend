@@ -34,7 +34,7 @@ app.use(AuthMiddleware)
 app.use(`${BASE_PATH}/trucks`, trucks)
 
 
-swaggerSpec.servers = [{ url: `${process.env.BASE_URL || 'https://node-template.mybluemix.net'}${BASE_PATH}` }]
+swaggerSpec.servers = [{ url: `${process.env.BASE_URL || 'http://localhost:8000'}${BASE_PATH}` }]
 app.use(`${BASE_PATH}/api-docs`, swaggerUi.serve, swaggerUi.setup(swaggerSpec))
 
 // Custom Handle Error

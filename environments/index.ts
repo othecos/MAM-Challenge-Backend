@@ -18,8 +18,6 @@ try {
     
    
 } catch (error) {
-    console.log(chalk.red('An error occurred, Try again later'))
-    console.error(error.status)
-    console.error(error)
+    console.log(chalk.red(`.env.${environment} not found`)) 
     // process.exit(1)
 }
