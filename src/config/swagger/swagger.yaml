@@ -21,7 +21,7 @@ components:
             properties:
                 lat:
                     type: number
-                lon:
+                lng:
                     type: number
                 insertDate:
                     type: string

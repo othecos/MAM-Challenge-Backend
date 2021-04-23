@@ -39,7 +39,7 @@
                                 properties:
                                     lat:
                                         type: number
-                                    lon:
+                                    lng:
                                         type: number
                             license_plate:
                                 type: string
