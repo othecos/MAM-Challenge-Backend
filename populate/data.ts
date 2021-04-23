@@ -31,8 +31,7 @@ export const generateRandomTrucks = (number: number = 1) => {
 
 
 export const generateLocationsByRoutes = async (origin: Coordinates, destination: Coordinates) => {
-    let locations: Array<any> = []
-    console.log(config.API_KEY)
+    let locations: Array<any> = [] 
     if (config.API_KEY) {
         try {
             const response = await client.directions({ params: { origin, destination, key: config.API_KEY, mode: TravelMode.driving } })
