@@ -1,6 +1,9 @@
 import { NODE_ENV } from '../env'
 
 const corsOptions: any = {
+    local: {
+        origin: '*'
+    },
     development: {
         origin: '*'
     },
