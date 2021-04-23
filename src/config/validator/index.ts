@@ -2,7 +2,7 @@ import { createValidator } from 'express-joi-validation'
 import { Schema, assert } from '@hapi/joi'
 import { NextFunction, Response } from 'express'
 import fs from 'fs'
-import { ERRORS } from '../responses'
+import { ERRORS } from '@config/responses'
 
 
 

@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose'
-import { DATABASE_MODELS } from '../../../config/storage'
+import { DATABASE_MODELS } from '@config/storage'
 
 
 const truckSchema = new Schema({

@@ -1,8 +1,8 @@
 import { Router, Request, Response, NextFunction } from 'express'
-import { validator } from '../../config/validator'
+import { validator } from '@config/validator'
 import { createSchema, truckParamsSchema,updateCurrentLocationSchema } from './schemas'
  
-import TrucksController from '../../controllers/trucks'
+import TrucksController from '@controllers/trucks'
 
 const router = Router()
 

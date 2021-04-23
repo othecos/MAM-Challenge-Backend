@@ -1,8 +1,8 @@
 import StorageController from '..'
 
-import { Trucks } from '../../../models/storage'
-import Truck from '../../../models/truck'
-import { HttpError } from '../../../utils/ErroHandler'
+import { Trucks } from '@models/storage'
+import Truck from '@models/truck'
+import { HttpError } from '@utils/ErroHandler'
 
 export default class TrucksStorageController extends StorageController {
     constructor() {

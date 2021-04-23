@@ -1,6 +1,6 @@
 import axios from 'axios'
 import ErrorHandler from './ErroHandler'
-import { MEDIA_TYPES } from '../config/HttpRequest'
+import { MEDIA_TYPES } from '@config/HttpRequest'
 import qs from 'qs'
 import Logger from './Logger'
 

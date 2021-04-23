@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import { getErrorMessage } from '../../config/responses'
+import { getErrorMessage } from '@config/responses'
 import joiErrorHandler from './JoiErrorHandler'
 
 export default (err: any, req: Request, res: Response, next: NextFunction) => {

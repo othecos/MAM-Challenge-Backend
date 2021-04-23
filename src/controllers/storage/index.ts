@@ -1,7 +1,7 @@
 import chalk from 'chalk'
 import mongoose, { ConnectionOptions, Mongoose } from 'mongoose'
-import { DATABASE_URL, ca, DATABASE_NAME } from '../../config/storage'
-import Utils from '../../utils'
+import { DATABASE_URL, ca, DATABASE_NAME } from '@config/storage'
+import Utils from '@utils/index'
 
 
 

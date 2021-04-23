@@ -1,16 +1,16 @@
 import { config } from 'dotenv'
 config()
 import express from 'express'
-import { env, corsOptions } from './config'
+import { env, corsOptions } from '@config/index'
 import cors from 'cors'
 import errorhandler from 'errorhandler'
 import chalk from 'chalk'
-import { AuthMiddleware, ErrorMiddleware } from './middleware'
+import { AuthMiddleware, ErrorMiddleware } from '@middleware/index'
 import SwaggerJSDoc, { SwaggerDefinition } from 'swagger-jsdoc'
 import swaggerUi from 'swagger-ui-express'
-import { options } from './config/swagger'
-import { trucks } from './routers'
-import Logger, { HttpLogger } from './utils/Logger/index'
+import { options } from '@config/swagger'
+import { trucks } from '@routers/index'
+import Logger, { HttpLogger } from '@utils/Logger/index'
 
 let swaggerSpec: SwaggerDefinition = SwaggerJSDoc(options) as SwaggerDefinition
 

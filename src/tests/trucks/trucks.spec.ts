@@ -2,7 +2,7 @@
 // @ts-nocheck
 import { expect } from 'chai'
 
-import TrucksController from '../../controllers/trucks'
+import TrucksController from '@controllers/trucks'
 import { generateRandomTrucks, generateRandomLocations } from './data'
 
 const trucks = generateRandomTrucks(10)

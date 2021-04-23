@@ -1,6 +1,6 @@
-import TrucksStorageController from '../storage/trucks'
-import Truck from '../../models/truck'
-import { HttpError } from '../../utils/ErroHandler'
+import TrucksStorageController from '@controllers/storage/trucks'
+import Truck from '@models/truck'
+import { HttpError } from '@utils/ErroHandler'
 
 
 interface LocationBody {

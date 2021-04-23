@@ -1,4 +1,4 @@
-import StorageController from '../controllers/storage'
+import StorageController from '@controllers/storage'
 
 describe('Mocha setup...',   () => {
  
