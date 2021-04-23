@@ -235,6 +235,17 @@ After the initial setup, you are ready to go and can start your development serv
 
 ## Testing
 
+1. Create an `.env.test` file in order to provide the correct configuration to run tests
+  Your file should be looking like this:
+
+  ```sh
+  DATABASE_URL=mongodb://localhost:27017,localhost:27018,localhost:27019?replicaSet=rs
+  GOOGLE_API_KEY=****************************************
+  DATABASE_NAME=test
+  BASE_URL=http://localhost:8000
+  NODE_ENV=test
+  ```
+
 To run the unit tests, just run the following command:
 ```sh
    npm run test

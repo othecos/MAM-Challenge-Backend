@@ -9,6 +9,7 @@ const trucks = generateRandomTrucks(10)
 describe('Crud testing...', function () {
     const trucksController = new TrucksController();
     this.timeout(50000)
+    await trucksController.initCollection()
     for (const truck of trucks) {
         it(`Creating truck ${truck.license_plate} in location [${truck.location.lat},${truck.location.lng}]...`, async function () {
 
