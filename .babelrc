@@ -1,0 +1,35 @@
+{ 
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+              "useBuiltIns": false
+            }
+          ],
+        "@babel/preset-typescript" 
+    ],
+    "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-runtime",
+        [
+            "module-resolver",
+            {
+                
+                "alias": {
+                    "@components": "./src/components",
+                    "@config": "./src/config",
+                    "@controllers": "./src/controllers",
+                    "@interfaces": "./src/interfaces",
+                    "@middleware": "./src/middleware",
+                    "@models": "./src/models",
+                    "@routers": "./src/routers",
+                    "@utils": "./src/utils",
+                    "@tests": "./src/tests",
+                    "@populate": "./populate"
+                } 
+            } 
+        ] 
+    ],
+    "ignore": ["**/*.spec.ts"] 
+ 
+}

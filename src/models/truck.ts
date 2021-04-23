@@ -9,7 +9,7 @@ interface TruckLocation {
 export default class Truck {
 
 
-    private _id = ''
+    public _id = ''
     public license_plate: string
     private location: TruckLocation
 
