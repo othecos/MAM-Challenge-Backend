@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=test npm run set-env && mocha --require ts-node/register --bail --exit --file 'src/tests/setup.spec.ts' 'src/**/**spec.ts' --reporter mochawesome --reporter-options reportDir=test-results,reportFilename=test-results",
+    "test": "cross-env NODE_ENV=test npm run set-env && mocha -r ts-node/register -r tsconfig-paths/register --bail --exit --file 'src/tests/setup.spec.ts' 'src/**/**spec.ts' --reporter mochawesome --reporter-options reportDir=test-results,reportFilename=test-results",
     "set-env": "rm -rf .env && ts-node environments",
     "nodemon": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify 'src/' --exec 'npm run start:dev'",
     "prelocal": "cross-env NODE_ENV=local npm run set-env",
