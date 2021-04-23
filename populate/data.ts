@@ -5,8 +5,8 @@ import { Coordinates } from './model'
 import { Client, TravelMode } from '@googlemaps/google-maps-services-js'
 import axios from 'axios'
 import { DirectionsResponseData } from '@googlemaps/google-maps-services-js/dist/directions'
-import { decodePath } from '../src/utils/googleMaps'
-import config from './../src/config/env'
+import { decodePath } from '@utils/googleMaps'
+import config from '@config/env'
 
 const client = new Client({ axiosInstance: axios })
 

@@ -1,7 +1,7 @@
 
 
-import TrucksController from './../src/controllers/trucks'
-import StorageController from './../src/controllers/storage/index'
+import TrucksController from '@controllers/trucks'
+import StorageController from '@controllers/storage/index'
 import { generateRandomTrucks, generateRandomLocationsWithinRadiusRange, generateLocationsByRoutes } from './data'
 import chalk from 'chalk'
 
